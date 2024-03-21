@@ -49,12 +49,13 @@ const FilterBar = () => {
     }
 
     return (
-        <div className="flex overflow-x-auto whitespace-nowrap h-14 mt-3 mb-4 shadow-lg font-mulish hide-scrollbar">
+        <div className="flex overflow-x-auto whitespace-nowrap h-14 mt-3 mb-4 shadow-md font-mulish hide-scrollbar">
             {filterOptionsV2.map((option, index) => {
                 return (
                     <div key={index}
-                         className={`flex flex-col px-2 flex-shrink-0 ${option.label === selectedFilter ? 'border-b-2 border-b-c-black' : ''} text-c-gray text-xs font-bold text-center cursor-pointer`}
-                         onClick={() => handleFilterChange(option.label)}>
+                         className={`flex flex-col px-2 flex-shrink-0 ${option.label === selectedFilter ? 'border-b-2 border-b-c-black text-c-black' : 'text-c-gray'} text-xs font-bold text-center cursor-pointer`}
+                         onClick={() => handleFilterChange(option.label)}
+                    >
                         <option.icon
                             className={`${option.label === selectedFilter ? 'text-c-black' : ''} mx-auto text-2xl mb-1`}/>
                         <p>{option.label}</p>
