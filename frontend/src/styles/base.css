@@ -19,3 +19,40 @@
 .shadow-top {
     box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1), 0 -2px 4px -1px rgba(0, 0, 0, 0.06);
 }
+
+.slick-dots li button:before {
+    color: white; /* Ändert die Farbe der Punkte zu Weiß */
+}
+
+/* Optional: Ändern Sie die Farbe beim Hover oder Aktiv-Sein */
+.slick-dots li.slick-active button:before {
+    opacity: 1; /* Macht den aktiven Punkt vollständig undurchsichtig */
+    color: white; /* Stellt sicher, dass der aktive Punkt weiß bleibt */
+}
+
+.slick-dots li button:hover:before {
+    opacity: .75; /* Etwas durchsichtig beim Hover für einen schönen Effekt */
+}
+
+/* Ergänzende Stile für den .slick-dots Container */
+.slick-dots {
+    width: 30%; /* Oder jede andere Prozentzahl nach Wunsch */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/* Ergänzende oder überschreibende Stile für individuelle Dots */
+.slick-dots li {
+    margin: 0 0px; /* Verringern Sie den Abstand, um die Gesamtbreite zu reduzieren */
+}
+
+.slick-dots li button {
+    width: 5px; /* Kleinere Breite für den Dot-Button */
+    height: 5px; /* Kleinere Höhe für den Dot-Button */
+}
+
+.slick-dots li button:before {
+    font-size: 8px; /* Kleinere Schriftgröße für den Inhalt des Dot-Buttons */
+    color: white; /* Setzt die Farbe der Punkte auf Weiß, wenn noch nicht geschehen */
+}
