@@ -28,7 +28,7 @@ const FundPanel: React.FC<{ fund: Fund }> = ({fund}) => {
     };
 
     return (
-        <div className={'font-mulish'}>
+        <div className={'font-mulish mb-8'}>
             <div className='rounded-2xl overflow-hidden'>
                 <Slider {...settings}>
                     {fund.images.map((image, index) => (
@@ -39,10 +39,10 @@ const FundPanel: React.FC<{ fund: Fund }> = ({fund}) => {
                     ))}
                 </Slider>
             </div>
-            <div className={'text-c-black'}>
-                <h2 className='text-xl font-bold'>{fund.fund_name}</h2>
-                <p className='text-c-gray text-sm'>{fund.fund_price}</p>
-                <p className='text-sm font-semibold'>{fund.fund_price}</p>
+            <div className={'text-c-black text-sm mt-2.5'}>
+                <h2 className='font-semibold'>{fund.fund_name}</h2>
+                <p className='text-c-gray'>{fund.fund_price}</p>
+                <p className='font-semibold'>{fund.fund_price}</p>
             </div>
         </div>
     );
