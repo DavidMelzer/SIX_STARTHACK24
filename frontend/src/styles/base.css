@@ -1,3 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200..1000&family=Open+Sans:wght@400;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* Verstecken der Scrollbar für Webkit-Browser wie Safari und Chrome */
+.hide-scrollbar::-webkit-scrollbar {
+    display: none; /* für Webkit-Browser */
+}
+
+/* Verstecken der Scrollbar für IE, Edge und Firefox */
+.hide-scrollbar {
+    -ms-overflow-style: none;  /* für Internet Explorer, Edge */
+    scrollbar-width: none;  /* für Firefox */
+}

@@ -6,8 +6,16 @@ export default {
     ],
     theme: {
         extend: {
-            colors: {},
-            fontFamily: {},
+            colors: {
+                'c-white': '#fefffe',
+                'c-black': '#010100',
+                'c-gray': '#797878',
+                'raisin': '#242425'
+            },
+            fontFamily: {
+                'mulish': ['Mulish', 'sans-serif'],
+                'open-sans': ['Open Sans', 'sans-serif'],
+            },
         },
     },
     plugins: [],
