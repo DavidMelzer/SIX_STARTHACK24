@@ -8,7 +8,7 @@ import {shuffleArray} from '@utils/shuffleArray';
 const Home = () => {
     const getRandomImage = () => {
         const randomImage = Math.floor(Math.random() * 28) + 1;
-        return `/images/${randomImage}.jpg`;
+        return `/assets/images/${randomImage}.jpg`;
     };
 
     const [filteredFunds, setFilteredFunds] = useState(() => {
