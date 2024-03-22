@@ -1,102 +1,31 @@
+import React from 'react';
 import FundPanel from "@components/FundPanel";
 
-const FundList = () => {
+interface Image {
+    image_url: string;
+    image_description: string;
+}
 
-    const funds = [
-        {
-            fund_name: 'Fund 1',
-            images: [
-                {
-                    image_url: 'https://picsum.photos/500',
-                    image_description: 'Fund 1 image 1'
-                },
-                {
-                    image_url: 'https://picsum.photos/500',
-                    image_description: 'Fund 1 image 2'
-                },
-                {
-                    image_url: 'https://picsum.photos/500',
-                    image_description: 'Fund 1 image 3'
-                },
-                {
-                    image_url: 'https://picsum.photos/500',
-                    image_description: 'Fund 1 image 4'
-                }
-            ],
-            fund_price: '120,74€',
-        },
-        {
-            fund_name: 'Fund 2',
-            images: [
-                {
-                    image_url: 'https://picsum.photos/500',
-                    image_description: 'Fund 2 image 1'
-                },
-                {
-                    image_url: 'https://picsum.photos/500',
-                    image_description: 'Fund 2 image 2'
-                },
-                {
-                    image_url: 'https://picsum.photos/500',
-                    image_description: 'Fund 2 image 3'
-                },
-                {
-                    image_url: 'https://picsum.photos/500',
-                    image_description: 'Fund 2 image 4'
-                }
-            ],
-            fund_price: '120,74€',
-        },
-        {
-            fund_name: 'Fund 3',
-            images: [
-                {
-                    image_url: 'https://picsum.photos/500',
-                    image_description: 'Fund 3 image 1'
-                },
-                {
-                    image_url: 'https://picsum.photos/500',
-                    image_description: 'Fund 3 image 2'
-                },
-                {
-                    image_url: 'https://picsum.photos/500',
-                    image_description: 'Fund 3 image 3'
-                },
-                {
-                    image_url: 'https://picsum.photos/500',
-                    image_description: 'Fund 3 image 4'
-                }
-            ],
-            fund_price: '120,74€',
-        },
-        {
-            fund_name: 'Fund 4',
-            images: [
-                {
-                    image_url: 'https://picsum.photos/500',
-                    image_description: 'Fund 4 image 1'
-                },
-                {
-                    image_url: 'https://picsum.photos/500',
-                    image_description: 'Fund 4 image 2'
-                },
-                {
-                    image_url: 'https://picsum.photos/500',
-                    image_description: 'Fund 4 image 3'
-                },
-                {
-                    image_url: 'https://picsum.photos/500',
-                    image_description: 'Fund 4 image 4'
-                }
-            ],
-            fund_price: '120,74€',
-        },
-    ];
+interface Fund {
+    fund_name: string;
+    images: Image[];
+    fund_price: number;
+    currency: string;
+    percentage_change: number;
+    morningstar_rating?: number;
+}
 
+interface FundListProps {
+    fundsData: Fund[];
+}
+
+const FundList = ({fundsData}: FundListProps) => {
     return (
         <div className={'px-6'}>
             {
-                funds.map((fund, index) => <FundPanel key={index} fund={fund}/>)
+                fundsData.map((fund, index) => (
+                    <FundPanel key={index} fund={fund}/>
+                ))
             }
         </div>
     );

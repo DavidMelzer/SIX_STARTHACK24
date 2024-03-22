@@ -6,7 +6,12 @@ import {GiPeaceDove, GiSwapBag, GiWaterfall} from "react-icons/gi";
 import {RiRecycleFill} from "react-icons/ri";
 import {HiViewList} from "react-icons/hi";
 
-const FilterBar = () => {
+
+interface FilterBarProps {
+    shuffleFunds: () => void;
+}
+
+const FilterBar = ({shuffleFunds}: FilterBarProps) => {
     const [selectedFilter, setSelectedFilter] = useState('All');
 
     const filterOptionsV2 = [
@@ -45,6 +50,7 @@ const FilterBar = () => {
     ];
 
     function handleFilterChange(filter: string) {
+        shuffleFunds();
         setSelectedFilter(filter);
     }
 
